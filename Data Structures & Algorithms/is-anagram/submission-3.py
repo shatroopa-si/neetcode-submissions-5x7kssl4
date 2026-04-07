@@ -1,12 +1,12 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         """
-            Since, it is assumed that input strings containg lower case chars from the english alphabet,
+            Since, it is assumed that input strings contain only lower case chars from the english alphabet,
             the space complexity is: O(1)
         """
         # Anagrams should have same length
         if len(s) == len(t):
-            # Create hashmaps for both s & t
+            # Create hashmaps for both s & t; counting the frequency of chars in each string
             s_map, t_map = {}, {}
             for ch in s:
                 s_map[ch] = s_map.get(ch, 0) + 1
